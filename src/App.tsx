@@ -8,6 +8,8 @@ import { OrdersPage, KitchenPage } from './pages/OrdersPage';
 import { TablesPage } from './pages/TablesPage';
 import { MenuPage } from './pages/MenuPage';
 import { InventoryPage } from './pages/InventoryPage';
+import { CustomersPage, SuppliersPage } from './pages/CustomersSuppliersPage';
+import { StaffPage, ExpensesPage, ReservationsPage, ReportsPage } from './pages/OtherPages';
 
 function App() {
   const { isAuthenticated, currentPage } = useStore();
@@ -25,6 +27,12 @@ function App() {
       case 'tables': return <TablesPage />;
       case 'menu': return <MenuPage />;
       case 'inventory': return <InventoryPage />;
+      case 'customers': return <CustomersPage />;
+      case 'suppliers': return <SuppliersPage />;
+      case 'staff': return <StaffPage />;
+      case 'expenses': return <ExpensesPage />;
+      case 'reservations': return <ReservationsPage />;
+      case 'reports': return <ReportsPage />;
       default: return <DashboardPage />;
     }
   };
